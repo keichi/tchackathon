@@ -18,7 +18,6 @@ namespace TCHackathon
 		// ATTENTION! Machine- and environment- dependent.
 		private const string SERIAL_PORT_PATH = "/dev/tty.usbmodem1412";
 		private float currentTime = 0.0f;
-		string currentMood = string.Empty;
 		private SerialPort serialPort;
 		private int nextBeat = 0;
 
