@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{C469CC78-5785-0025-47E7-3F057C483325}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_4;UNITY_4_3;UNITY_64;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\CameraMove.cs" />
+     <Compile Include="Assets\Scripts\DebugConsole.cs" />
+     <Compile Include="Assets\Scripts\RotationY.cs" />
+     <Compile Include="Assets\Scripts\VJSequencer.cs" />
+     <Compile Include="Assets\Scripts\analyzer\MainManager.cs" />
+     <Compile Include="Assets\Scripts\analyzer\MiniJSON.cs" />
+     <Compile Include="Assets\Vj\VJKit\Particles\Scripts\OrbitalRotation.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJAnimatorModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJAudioSourceModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJCameraBackgroundColorLerpModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJGameObjectModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJGravityItemModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJGravityModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJLightModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJMaterialLerpModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJMaterialPropertyModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJMaterialPropertyModifier2.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Modifier\VJSceneSpeedModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\TextureSizeAttribute.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\VJBaseModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\VJBaseTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\VJDelayEnable.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\VJGameObjectPropertyHelper.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\VJLightPropertyHelper.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\VJMaterialPropertyHelper.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\VJMicrophone.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\VJObjectDestroyer.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\VJPerlin.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\audiojack\AudioJack.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\audiojack\Reaktor.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJAbstractAudioJackDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJAbstractDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJAudioJackDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJAudioJackVolumeDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJGamepadDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJMidiKnobDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJMidiNoteDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJMidiNoteOnDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJMidiNotePitchDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\datasource\VJVolumeDataSource.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\dmx\Plugins\dmx\DMXAbstractController.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\dmx\Plugins\dmx\DMXOLAOSCController.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\dmx\Plugins\dmx\VJDMXChannelDataOutputModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\manager\VJAbstractManager.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\manager\VJAudioJackManager.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\manager\VJGamepadManager.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\manager\VJManager.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\manager\VJMidiManager.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\midi\VJMIDIKnobOutputModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\midi\VJMIDINoteOutputModifier.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\midi\VJMIDINoteOutputTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\midi\VJMidiInput.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\midi\VJMidiSequencer.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\midibridge\MidiBridge.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\midibridge\MidiInput.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\midibridge\MidiOut.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\osc\OSCClient.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\smflite\MidiDataStreamReader.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\smflite\MidiEvent.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\smflite\MidiFileContainer.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\smflite\MidiFileLoader.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\smflite\MidiTrack.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Plugins\smflite\MidiTrackSequencer.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJAnimatorTransitionTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJAnimatorTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJGameObjectLoopSwitchTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJGameObjectOnOffTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJGameObjectTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJLightTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJMaterialLerpTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJMaterialPropertyTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJMessageTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJNegativePositiveTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJOnOffTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJParticleEmitterEmitTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJParticleSystemEmitTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Trigger\VJSpawnTrigger.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJCameraBuilboard.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJFbm.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJFbmTransform.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJFollowCamera.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJGravityItem.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJGravityPlane.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJGravitySphere.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJMoviePlayer.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJPositionFreeze.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJRotateCamera.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJWebCam.cs" />
+     <Compile Include="Assets\Vj\VJKit\Script\Utility\VJWireframeCamera.cs" />
+     <Compile Include="Assets\Vj\VJKitNI\Script\Plugins\VJZigManager.cs" />
+     <Compile Include="Assets\Vj\VJKitNI\Script\Plugins\VJZigSensorField.cs" />
+     <Compile Include="Assets\Vj\VJKitNI\Script\Plugins\VJZigSensorFieldDataSource.cs" />
+     <None Include="Assets\Vj\VJKit\Boids\Trail Particle.shader" />
+     <None Include="Assets\Vj\VJKit\Preset Items\Shader\NotShadow.shader" />
+     <None Include="Assets\Vj\VJKit\Boids\Transparent Wire.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
