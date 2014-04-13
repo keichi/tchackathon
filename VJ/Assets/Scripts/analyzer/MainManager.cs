@@ -31,7 +31,9 @@ namespace TCHackathon
 				void Start ()
 				{
 						serialPort = new SerialPort(SERIAL_PORT_PATH);
-						serialPort.Open();
+						if (serialPort != null) {
+							serialPort.Open();
+						}
 
 						AudioPath = Application.dataPath + "/Resources/Sounds/test_sound.mp3";
 						AnalyzeSong(AudioPath);
@@ -47,7 +49,9 @@ namespace TCHackathon
 						}
 
 						if (nextBeat < BeatTimings.Length && audioManager.audioTime > BeatTimings[nextBeat]) {
-								serialPort.Write("B");
+								if (serialPort != null) {
+									serialPort.Write("B");
+								}
 								nextBeat++;
 						}
 				}
