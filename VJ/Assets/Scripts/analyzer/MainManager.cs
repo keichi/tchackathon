@@ -15,6 +15,8 @@ namespace TCHackathon
 			public VJSequencer vJSequencer;
 				public AudioManager audioManager;
 				private const string GRACENOTE_API_URL = "http://devapi.gracenote.com/v1/timeline/";
+				// ATTENTION! Machine- and environment- dependent.
+				private const string SERIAL_PORT_PATH = "/dev/tty.usbmodem1412";
 				private float currentTime = 0.0f;
 				string currentMood = string.Empty;
 				private SerialPort serialPort;
@@ -28,7 +30,7 @@ namespace TCHackathon
 
 				void Start ()
 				{
-						serialPort = new SerialPort("/dev/tty.usbmodem1412");
+						serialPort = new SerialPort(SERIAL_PORT_PATH);
 						serialPort.Open();
 
 						AudioPath = Application.dataPath + "/Resources/Sounds/test_sound.mp3";
