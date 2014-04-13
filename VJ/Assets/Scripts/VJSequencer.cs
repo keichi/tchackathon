@@ -54,7 +54,6 @@ public class VJSequencer : MonoBehaviour
 	private void ChangeEffect (int index)
 	{
 		if (currentEffectIndex != index) {
-			Debug.LogError ("change");
 			Effects [currentEffectIndex].SetActive (false);
 			Effects [index].SetActive (true);
 			currentEffectIndex = index;
