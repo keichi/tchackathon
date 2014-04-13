@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d576f4ad93e44ae4827469101005163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  source: {fileID: 0}
+  manager: {fileID: 1772219105}
+  source: {fileID: 1772219104}
   sourceType: 0
   m_boost: 1
   boostByOtherSource: 0
@@ -270,8 +270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4309c9a19ff7444cc8ec5c941ac2bb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  source: {fileID: 0}
+  manager: {fileID: 1772219105}
+  source: {fileID: 1772219104}
   sourceType: 0
   m_boost: 1
   boostByOtherSource: 0
@@ -1420,8 +1420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4309c9a19ff7444cc8ec5c941ac2bb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  source: {fileID: 0}
+  manager: {fileID: 1772219105}
+  source: {fileID: 1772219104}
   sourceType: 0
   m_boost: 1
   boostByOtherSource: 0
@@ -1859,7 +1859,7 @@ ParticleSystem:
           rgba: 4278190335
         key1:
           serializedVersion: 2
-          rgba: 2298772471
+          rgba: 4278483959
         key2:
           serializedVersion: 2
           rgba: 14843131
@@ -2678,8 +2678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4309c9a19ff7444cc8ec5c941ac2bb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  source: {fileID: 0}
+  manager: {fileID: 1772219105}
+  source: {fileID: 1772219104}
   sourceType: 0
   m_boost: 1
   boostByOtherSource: 0
@@ -3873,6 +3873,67 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1115728077}
+--- !u!1 &875280953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 875280955}
+  - 114: {fileID: 875280954}
+  m_Layer: 0
+  m_Name: Voice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &875280954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 875280953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031b5fdd10bb543b8b2b1c186d0ac425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1772219105}
+  source: {fileID: 1772219104}
+  sourceType: 0
+  m_boost: 1
+  boostByOtherSource: 0
+  boostManager: {fileID: 0}
+  boostSource: {fileID: 0}
+  limitValueMinMax: 0
+  valueMin: 0
+  valueMax: 1
+  valueBaseOffset: 0
+  rest: 0
+  restStrength: .980000019
+  lastReturnedValue: 0
+  negative: 0
+  multiple: 0
+  targets: []
+  isModifierEnabled: 1
+  thType: 3
+  threshold: .25
+  semaphore: 0
+  trigerDelaySec: 0
+  propertyToModify: 0
+--- !u!4 &875280955
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 875280953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1001 &981374428
 Prefab:
   m_ObjectHideFlags: 0
@@ -3920,6 +3981,34 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68e9ab1d87d53420aa775ddfc7dc1aad, type: 2}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1772219105}
+    - target: {fileID: 11400002, guid: 68e9ab1d87d53420aa775ddfc7dc1aad, type: 2}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1772219104}
+    - target: {fileID: 11400000, guid: 68e9ab1d87d53420aa775ddfc7dc1aad, type: 2}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1772219105}
+    - target: {fileID: 1500002, guid: 68e9ab1d87d53420aa775ddfc7dc1aad, type: 2}
+      propertyPath: maxSize
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500002, guid: 68e9ab1d87d53420aa775ddfc7dc1aad, type: 2}
+      propertyPath: maxEnergy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600002, guid: 68e9ab1d87d53420aa775ddfc7dc1aad, type: 2}
+      propertyPath: m_LengthScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 68e9ab1d87d53420aa775ddfc7dc1aad, type: 2}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1772219104}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68e9ab1d87d53420aa775ddfc7dc1aad, type: 2}
   m_RootGameObject: {fileID: 1884431980}
@@ -3937,6 +4026,7 @@ GameObject:
   - 114: {fileID: 1000939298}
   - 114: {fileID: 1000939299}
   - 114: {fileID: 1000939300}
+  - 114: {fileID: 1000939301}
   m_Layer: 0
   m_Name: SceneObj
   m_TagString: Untagged
@@ -4011,6 +4101,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DebugText: 
+--- !u!114 &1000939301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000939295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade7d3e9b125e43508cf282f85e816b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1033799754}
+  endPos: {x: 0, y: 0, z: 0}
+  voice: {fileID: 875280954}
+  isPause: 0
 --- !u!1 &1010169665
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,7 +4358,7 @@ MonoBehaviour:
   boostManager: {fileID: 0}
   boostSource: {fileID: 0}
   limitValueMinMax: 0
-  valueMin: 1
+  valueMin: 0
   valueMax: 100
   valueBaseOffset: 0
   rest: 0
@@ -4264,7 +4369,7 @@ MonoBehaviour:
   targets: []
   isModifierEnabled: 1
   thType: 3
-  threshold: .25
+  threshold: .100000001
   semaphore: 0
   trigerDelaySec: 0
   propertyToModify: 15
@@ -4310,8 +4415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d576f4ad93e44ae4827469101005163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  source: {fileID: 0}
+  manager: {fileID: 1772219105}
+  source: {fileID: 1772219104}
   sourceType: 0
   m_boost: 1
   boostByOtherSource: 0
@@ -5618,30 +5723,46 @@ Prefab:
     - target: {fileID: 11400000, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
       propertyPath: manager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1772219105}
     - target: {fileID: 11400000, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
       propertyPath: source
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1772219104}
     - target: {fileID: 11400004, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
       propertyPath: manager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1772219105}
     - target: {fileID: 11400004, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
       propertyPath: source
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1772219104}
     - target: {fileID: 11400002, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
       propertyPath: manager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1772219105}
     - target: {fileID: 11400002, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
       propertyPath: source
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1772219104}
     - target: {fileID: 100000, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.atime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.key0.rgba
+      value: 4278190335
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.key1.rgba
+      value: 4278483959
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.ctime4
+      value: 65535
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 573d5a1f711c646389c98185d3e170ba, type: 2}
