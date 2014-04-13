@@ -14,6 +14,7 @@ namespace TCHackathon
 	{
 		public VJSequencer vJSequencer;
 		public AudioManager audioManager;
+		public DebugConsole debugConsole;
 		private const string GRACENOTE_API_URL = "http://devapi.gracenote.com/v1/timeline/";
 		// ATTENTION! Machine- and environment- dependent.
 		private const string SERIAL_PORT_PATH = "/dev/tty.usbmodem1412";
@@ -49,6 +50,9 @@ namespace TCHackathon
 				currentTime = 0.0f;
 				int audioTime = (int)(UnityEngine.Mathf.Clamp (audioManager.audioTime, 0.0f, (float)Moods.Length));
 				vJSequencer.ChangeMood (Moods [audioTime]);
+				if (debugConsole) {
+					debugConsole.DebugText = Moods [audioTime];
+				}
 			}
 
 			if (nextBeat < BeatTimings.Length && audioManager.audioTime > BeatTimings [nextBeat]) {

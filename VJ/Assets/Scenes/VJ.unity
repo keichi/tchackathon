@@ -3936,6 +3936,7 @@ GameObject:
   - 114: {fileID: 1000939297}
   - 114: {fileID: 1000939298}
   - 114: {fileID: 1000939299}
+  - 114: {fileID: 1000939300}
   m_Layer: 0
   m_Name: SceneObj
   m_TagString: Untagged
@@ -3983,6 +3984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vJSequencer: {fileID: 1000939297}
   audioManager: {fileID: 1000939299}
+  debugConsole: {fileID: 1000939300}
 --- !u!114 &1000939299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3997,6 +3999,18 @@ MonoBehaviour:
   audioSource: {fileID: 739367596}
   audioTime: 0
   CurrentAudioTime: 1
+--- !u!114 &1000939300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000939295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71cdbd4ba1dd045e1bdba073abc56bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DebugText: 
 --- !u!1 &1010169665
 GameObject:
   m_ObjectHideFlags: 0
