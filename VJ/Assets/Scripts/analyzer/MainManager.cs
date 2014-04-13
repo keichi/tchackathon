@@ -22,12 +22,13 @@ namespace TCHackathon
 
 				private string[] Moods { get; set; }
 
-				private string AudioPath = "/Users/kimurashingo/Documents/git/tchackathon/VJ/Assets/Resources/Sounds/test_sound.mp3";
+				private string AudioPath = string.Empty;
 
 				void Start ()
 				{
 						// use 9600 baud, no parity
 						//var serial = new SerialPort ();
+						AudioPath = Application.dataPath + "/Resources/Sounds/test_sound.mp3";
 						AnalyzeSong (AudioPath);
 				}
 
