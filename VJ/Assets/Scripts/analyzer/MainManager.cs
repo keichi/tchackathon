@@ -12,22 +12,24 @@ namespace TCHackathon
 {
 		public class MainManager : MonoBehaviour
 		{
-				public VJSequencer vJSequencer;
+			public VJSequencer vJSequencer;
 				public AudioManager audioManager;
 				private const string GRACENOTE_API_URL = "http://devapi.gracenote.com/v1/timeline/";
 				private float currentTime = 0.0f;
 				string currentMood = string.Empty;
+				private SerialPort serialPort;
+				private int nextBeat = 0;
 
 				public double[] BeatTimings { get; set; }
 
 				private string[] Moods { get; set; }
 
 				private string AudioPath = "/Users/kimurashingo/Documents/git/tchackathon/VJ/Assets/Resources/Sounds/test_sound.mp3";
-
+		
 				void Start ()
 				{
-						// use 9600 baud, no parity
-						//var serial = new SerialPort ();
+						serialPort = new SerialPort("/dev/tty.usbmodem1412");
+						serialPort.Open();
 						AnalyzeSong (AudioPath);
 				}
 
@@ -38,6 +40,18 @@ namespace TCHackathon
 								currentTime = 0.0f;
 								int audioTime = (int)(UnityEngine.Mathf.Clamp(audioManager.audioTime, 0.0f, (float)Moods.Length));
 								//VJSequencer(Moods [audioTime]);
+						}
+
+						if (nextBeat < BeatTimings.Length && audioManager.audioTime > BeatTimings[nextBeat]) {
+								serialPort.Write("B");
+								nextBeat++;
+						}
+				}
+
+				void Dispose()
+				{
+						if (serialPort != null && serialPort.IsOpen) {
+								serialPort.Close();
 						}
 				}
 
