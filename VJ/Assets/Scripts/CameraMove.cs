@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CameraMove : MonoBehaviour {
-	public GameObject camera;
+	public GameObject targetCamera;
 	public Vector3 endPos;
 
 	public VJGameObjectTrigger voice;
@@ -11,7 +11,7 @@ public class CameraMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		endPos = camera.transform.localPosition;
+		endPos = targetCamera.transform.localPosition;
 	}
 	
 	// Update is called once per frame
@@ -22,6 +22,6 @@ public class CameraMove : MonoBehaviour {
 		Vector3 pos = endPos;
 		pos.z += (3.0f - voice.lastReturnedValue * 3.0f);
 
-		camera.transform.localPosition -= (camera.transform.localPosition - pos) * 0.1f;
+		targetCamera.transform.localPosition -= (targetCamera.transform.localPosition - pos) * 0.1f;
 	}
 }

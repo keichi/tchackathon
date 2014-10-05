@@ -30,7 +30,6 @@ namespace TCHackathon
 
 		void Start ()
 		{
-
 			if (File.Exists (SERIAL_PORT_PATH)) {
 				serialPort = new SerialPort (SERIAL_PORT_PATH);
 				if (serialPort != null) {
@@ -38,7 +37,7 @@ namespace TCHackathon
 				}
 			}
 
-			AudioPath = Application.dataPath + "/Resources/Sounds/test_sound.mp3";
+			AudioPath = Application.streamingAssetsPath + "/Sounds/test_sound.mp3";
 			AnalyzeSong (AudioPath);
 			audioManager.audioSource.Play ();
 		}
