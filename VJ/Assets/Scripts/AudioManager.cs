@@ -7,9 +7,13 @@ public class AudioManager : MonoBehaviour
 	public float audioTime = 0.0f;
 	public float CurrentAudioTime = 1.0f;
 
+	[HideInInspector]
+	public float audioMaxTime = 0.0f;
+
 	// Use this for initialization
 	void Start ()
 	{
+		audioMaxTime = audioSource.clip.length;
 	}
 	// Update is called once per frame
 	void Update ()

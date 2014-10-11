@@ -7,6 +7,6 @@ public class DebugConsole : MonoBehaviour
 
 	void OnGUI ()
 	{
-		GUI.Label (new Rect (0, 0, 100, 30), DebugText);
+		GUI.Label (new Rect (0, 0, 200, 50), DebugText);
 	}
 }
